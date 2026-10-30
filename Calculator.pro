@@ -15,5 +15,8 @@ HEADERS += \
 FORMS += \
     calculator.ui
 
+RESOURCES += \
+    resources.qrc
+
 # MinGW 下中文源码按 UTF-8 编译
 win32-g++: QMAKE_CXXFLAGS += -finput-charset=UTF-8 -fexec-charset=UTF-8

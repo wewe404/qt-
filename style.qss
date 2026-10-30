@@ -1,0 +1,91 @@
+/* 计算器整体主题：深色背景 + 卡片式按键 */
+QMainWindow,
+#centralwidget {
+    background-color: #181b20;
+}
+
+QLineEdit#expressionDisplay {
+    background-color: #181b20;
+    border: none;
+    color: #8a919c;
+    font-size: 15px;
+    padding: 0px 8px;
+    min-height: 26px;
+    max-height: 26px;
+}
+
+QLineEdit#display {
+    background-color: #181b20;
+    border: none;
+    color: #ffffff;
+    font-size: 42px;
+    font-weight: 500;
+    padding: 0px 8px;
+    min-height: 86px;
+    max-height: 86px;
+}
+
+QPushButton {
+    background-color: #2e333b;
+    color: #f2f4f7;
+    border: none;
+    border-radius: 12px;
+    font-size: 22px;
+    min-height: 56px;
+}
+
+QPushButton:hover {
+    background-color: #3b414b;
+}
+
+QPushButton:pressed {
+    background-color: #24282f;
+}
+
+/* 运算符按键：橙色高亮 */
+QPushButton#addButton,
+QPushButton#subtractButton,
+QPushButton#multiplyButton,
+QPushButton#divideButton,
+QPushButton#equalsButton {
+    background-color: #f0a33a;
+    color: #1b1d21;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+QPushButton#addButton:hover,
+QPushButton#subtractButton:hover,
+QPushButton#multiplyButton:hover,
+QPushButton#divideButton:hover,
+QPushButton#equalsButton:hover {
+    background-color: #ffb84d;
+}
+
+QPushButton#addButton:pressed,
+QPushButton#subtractButton:pressed,
+QPushButton#multiplyButton:pressed,
+QPushButton#divideButton:pressed,
+QPushButton#equalsButton:pressed {
+    background-color: #d98a26;
+}
+
+/* 清除按键：红色 */
+QPushButton#clearButton {
+    background-color: #3a2f2f;
+    color: #ff6b5e;
+}
+
+QPushButton#clearButton:hover {
+    background-color: #4a3a3a;
+}
+
+/* 退格按键 */
+QPushButton#backspaceButton {
+    background-color: #322f3a;
+    color: #ffb86b;
+}
+
+QPushButton#backspaceButton:hover {
+    background-color: #423d4d;
+}
