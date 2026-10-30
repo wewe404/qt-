@@ -42,6 +42,54 @@ QString Calculator::expressionText() const
     return ui->expressionDisplay->text();
 }
 
+/* ---------------- 键盘事件 ---------------- */
+
+void Calculator::keyPressEvent(QKeyEvent *event)
+{
+    const int key = event->key();
+
+    // 数字键（主键盘与小键盘共用同一套 key 值）
+    if (key >= Qt::Key_0 && key <= Qt::Key_9) {
+        handleDigit(key - Qt::Key_0);
+        return;
+    }
+
+    switch (key) {
+    case Qt::Key_Period:
+    case Qt::Key_Comma:
+        handleDecimal();
+        return;
+    case Qt::Key_Plus:
+        handleOperator(QStringLiteral("+"));
+        return;
+    case Qt::Key_Minus:
+        handleOperator(QStringLiteral("-"));
+        return;
+    case Qt::Key_Asterisk:
+        handleOperator(QStringLiteral("*"));
+        return;
+    case Qt::Key_Slash:
+        handleOperator(QStringLiteral("/"));
+        return;
+    case Qt::Key_Return:
+    case Qt::Key_Enter:
+    case Qt::Key_Equal:
+        handleEquals();
+        return;
+    case Qt::Key_Backspace:
+        handleBackspace();
+        return;
+    case Qt::Key_Escape:
+    case Qt::Key_Delete:
+        handleClear();
+        return;
+    default:
+        break;
+    }
+
+    QMainWindow::keyPressEvent(event);
+}
+
 /* ---------------- 按钮分发 ---------------- */
 
 void Calculator::onButtonClicked()
