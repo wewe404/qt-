@@ -136,6 +136,8 @@ void Calculator::handleDigit(int digit)
         // 开始输入新的操作数：直接覆盖显示值，并清掉上一次等号运算的回显
         m_currentInput = QString::number(digit);
         m_startNewInput = false;
+        m_lastExpression.clear();
+        m_justEvaluated = false;
     } else if (m_currentInput == QStringLiteral("0")) {
         // 前导 0 不保留，但 "0." 之后的 0 要保留
         if (!m_currentInput.contains(QLatin1Char('.')))
@@ -156,6 +158,8 @@ void Calculator::handleDecimal()
         // 直接输入小数点时补全为 "0."
         m_currentInput = QStringLiteral("0.");
         m_startNewInput = false;
+        m_lastExpression.clear();
+        m_justEvaluated = false;
     } else if (!m_currentInput.contains(QLatin1Char('.'))) {
         // 关键：同一个操作数只允许出现一个小数点，重复按 . 直接忽略
         m_currentInput += QLatin1Char('.');
