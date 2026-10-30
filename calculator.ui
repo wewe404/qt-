@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>360</width>
-    <height>560</height>
+    <height>540</height>
    </rect>
   </property>
   <property name="minimumSize">
@@ -22,33 +22,20 @@
   <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout" name="mainLayout">
     <property name="spacing">
-     <number>10</number>
+     <number>2</number>
     </property>
     <property name="leftMargin">
-     <number>14</number>
+     <number>4</number>
     </property>
     <property name="topMargin">
-     <number>18</number>
+     <number>8</number>
     </property>
     <property name="rightMargin">
-     <number>14</number>
+     <number>4</number>
     </property>
     <property name="bottomMargin">
-     <number>18</number>
+     <number>4</number>
     </property>
-    <item>
-     <widget class="QLineEdit" name="expressionDisplay">
-      <property name="readOnly">
-       <bool>true</bool>
-      </property>
-      <property name="focusPolicy">
-       <enum>Qt::NoFocus</enum>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
-      </property>
-     </widget>
-    </item>
     <item>
      <widget class="QLineEdit" name="display">
       <property name="readOnly">
@@ -68,12 +55,32 @@
     <item>
      <layout class="QGridLayout" name="buttonLayout">
       <property name="horizontalSpacing">
-       <number>8</number>
+       <number>2</number>
       </property>
       <property name="verticalSpacing">
-       <number>8</number>
+       <number>2</number>
       </property>
       <item row="0" column="0">
+       <widget class="QPushButton" name="percentButton">
+        <property name="focusPolicy">
+         <enum>Qt::NoFocus</enum>
+        </property>
+        <property name="text">
+         <string>%</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QPushButton" name="clearEntryButton">
+        <property name="focusPolicy">
+         <enum>Qt::NoFocus</enum>
+        </property>
+        <property name="text">
+         <string>CE</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="2">
        <widget class="QPushButton" name="clearButton">
         <property name="focusPolicy">
          <enum>Qt::NoFocus</enum>
@@ -83,7 +90,7 @@
         </property>
        </widget>
       </item>
-      <item row="0" column="1">
+      <item row="0" column="3">
        <widget class="QPushButton" name="backspaceButton">
         <property name="focusPolicy">
          <enum>Qt::NoFocus</enum>
@@ -93,7 +100,37 @@
         </property>
        </widget>
       </item>
-      <item row="0" column="2">
+      <item row="1" column="0">
+       <widget class="QPushButton" name="reciprocalButton">
+        <property name="focusPolicy">
+         <enum>Qt::NoFocus</enum>
+        </property>
+        <property name="text">
+         <string>1/x</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QPushButton" name="squareButton">
+        <property name="focusPolicy">
+         <enum>Qt::NoFocus</enum>
+        </property>
+        <property name="text">
+         <string>x²</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="2">
+       <widget class="QPushButton" name="squareRootButton">
+        <property name="focusPolicy">
+         <enum>Qt::NoFocus</enum>
+        </property>
+        <property name="text">
+         <string>√x</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="3">
        <widget class="QPushButton" name="divideButton">
         <property name="focusPolicy">
          <enum>Qt::NoFocus</enum>
@@ -103,17 +140,7 @@
         </property>
        </widget>
       </item>
-      <item row="0" column="3">
-       <widget class="QPushButton" name="multiplyButton">
-        <property name="focusPolicy">
-         <enum>Qt::NoFocus</enum>
-        </property>
-        <property name="text">
-         <string>×</string>
-        </property>
-       </widget>
-      </item>
-      <item row="1" column="0">
+      <item row="2" column="0">
        <widget class="QPushButton" name="digit7Button">
         <property name="focusPolicy">
          <enum>Qt::NoFocus</enum>
@@ -123,7 +150,7 @@
         </property>
        </widget>
       </item>
-      <item row="1" column="1">
+      <item row="2" column="1">
        <widget class="QPushButton" name="digit8Button">
         <property name="focusPolicy">
          <enum>Qt::NoFocus</enum>
@@ -133,7 +160,7 @@
         </property>
        </widget>
       </item>
-      <item row="1" column="2">
+      <item row="2" column="2">
        <widget class="QPushButton" name="digit9Button">
         <property name="focusPolicy">
          <enum>Qt::NoFocus</enum>
@@ -143,17 +170,17 @@
         </property>
        </widget>
       </item>
-      <item row="1" column="3">
-       <widget class="QPushButton" name="subtractButton">
+      <item row="2" column="3">
+       <widget class="QPushButton" name="multiplyButton">
         <property name="focusPolicy">
          <enum>Qt::NoFocus</enum>
         </property>
         <property name="text">
-         <string>−</string>
+         <string>×</string>
         </property>
        </widget>
       </item>
-      <item row="2" column="0">
+      <item row="3" column="0">
        <widget class="QPushButton" name="digit4Button">
         <property name="focusPolicy">
          <enum>Qt::NoFocus</enum>
@@ -163,7 +190,7 @@
         </property>
        </widget>
       </item>
-      <item row="2" column="1">
+      <item row="3" column="1">
        <widget class="QPushButton" name="digit5Button">
         <property name="focusPolicy">
          <enum>Qt::NoFocus</enum>
@@ -173,7 +200,7 @@
         </property>
        </widget>
       </item>
-      <item row="2" column="2">
+      <item row="3" column="2">
        <widget class="QPushButton" name="digit6Button">
         <property name="focusPolicy">
          <enum>Qt::NoFocus</enum>
@@ -183,17 +210,17 @@
         </property>
        </widget>
       </item>
-      <item row="2" column="3">
-       <widget class="QPushButton" name="addButton">
+      <item row="3" column="3">
+       <widget class="QPushButton" name="subtractButton">
         <property name="focusPolicy">
          <enum>Qt::NoFocus</enum>
         </property>
         <property name="text">
-         <string>+</string>
+         <string>−</string>
         </property>
        </widget>
       </item>
-      <item row="3" column="0">
+      <item row="4" column="0">
        <widget class="QPushButton" name="digit1Button">
         <property name="focusPolicy">
          <enum>Qt::NoFocus</enum>
@@ -203,7 +230,7 @@
         </property>
        </widget>
       </item>
-      <item row="3" column="1">
+      <item row="4" column="1">
        <widget class="QPushButton" name="digit2Button">
         <property name="focusPolicy">
          <enum>Qt::NoFocus</enum>
@@ -213,7 +240,7 @@
         </property>
        </widget>
       </item>
-      <item row="3" column="2">
+      <item row="4" column="2">
        <widget class="QPushButton" name="digit3Button">
         <property name="focusPolicy">
          <enum>Qt::NoFocus</enum>
@@ -223,17 +250,27 @@
         </property>
        </widget>
       </item>
-      <item row="3" column="3" rowspan="2">
-       <widget class="QPushButton" name="equalsButton">
+      <item row="4" column="3">
+       <widget class="QPushButton" name="addButton">
         <property name="focusPolicy">
          <enum>Qt::NoFocus</enum>
         </property>
         <property name="text">
-         <string>=</string>
+         <string>+</string>
         </property>
        </widget>
       </item>
-      <item row="4" column="0" colspan="2">
+      <item row="5" column="0">
+       <widget class="QPushButton" name="signButton">
+        <property name="focusPolicy">
+         <enum>Qt::NoFocus</enum>
+        </property>
+        <property name="text">
+         <string>+/−</string>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="1">
        <widget class="QPushButton" name="digit0Button">
         <property name="focusPolicy">
          <enum>Qt::NoFocus</enum>
@@ -243,13 +280,23 @@
         </property>
        </widget>
       </item>
-      <item row="4" column="2">
+      <item row="5" column="2">
        <widget class="QPushButton" name="decimalButton">
         <property name="focusPolicy">
          <enum>Qt::NoFocus</enum>
         </property>
         <property name="text">
          <string>.</string>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="3">
+       <widget class="QPushButton" name="equalsButton">
+        <property name="focusPolicy">
+         <enum>Qt::NoFocus</enum>
+        </property>
+        <property name="text">
+         <string>=</string>
         </property>
        </widget>
       </item>
